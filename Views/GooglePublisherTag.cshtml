@@ -1,0 +1,27 @@
+﻿@using Arana.DoubleClickForPublishers.Services
+@using Orchard.ContentManagement
+@{
+   var publishersSettings = WorkContext.CurrentSite.As<Arana.DoubleClickForPublishers.Models.DoubleClickForPublishersSettingsPart>( );
+   if ( publishersSettings == null || string.IsNullOrWhiteSpace( publishersSettings.NetworkCode ) ) {
+      return;
+   }
+   var networkCode = publishersSettings.NetworkCode;
+
+   var adService = WorkContext.Resolve<IAdService>();
+
+   int randomId = new Random( DateTime.Now.Millisecond * GetHashCode() * Model.GetHashCode() ).Next( );
+   var unitName = string.Format( "/{0}/{1}", networkCode, Model.AdUnit );
+   var unitSize = string.Format("[{0},{1}]", Model.Width, Model.Height);
+   var unitDiv = string.Format("div-gpt-ad-{0}", randomId);
+
+   adService.Queue.Add(new AdServiceQueueEntry {AdElement = unitDiv, AdSize = unitSize, AdTargeting = Model.Targeting, AdUnit = unitName});
+   
+   Style.Require( "GooglePublisherTags" );
+}
+<div class="google-publisher-tag">
+   <div id='@(unitDiv)' style='width:@(Model.Width)px; height:@(Model.Height)px;'>
+      <script type='text/javascript'>
+         googletag.cmd.push(function () { googletag.display('@(unitDiv)'); });
+      </script>
+   </div>
+</div>

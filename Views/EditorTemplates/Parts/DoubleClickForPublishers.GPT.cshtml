@@ -1,0 +1,18 @@
+﻿@model Arana.DoubleClickForPublishers.Models.GooglePublisherTagPart
+<fieldset>
+   <div>
+      <label for="@Html.FieldIdFor(m => m.AdUnit)">@T("Ad Unit")</label>
+      @Html.EditorFor(m => m.AdUnit)
+      @Html.ValidationMessageFor(m => m.AdUnit)
+   </div>
+   <div>
+      <label for="@Html.FieldIdFor(m => m.Height)">@T("Height")</label>
+      @Html.EditorFor(m => m.Height)
+      @Html.ValidationMessageFor(m => m.Height)
+   </div>
+   <div>
+      <label for="@Html.FieldIdFor(m => m.Width)">@T("Width")</label>
+      @Html.EditorFor(m => m.Width)
+      @Html.ValidationMessageFor(m => m.Width)
+   </div>
+</fieldset>

@@ -1,0 +1,38 @@
+﻿@{
+   var adService = WorkContext.Resolve<Arana.DoubleClickForPublishers.Services.IAdService>();
+   var entires = adService.Queue;
+
+   if (!entires.Any()) {
+      return;
+   }
+}
+
+@if (Model.UseAsyncTags) {
+   <script type='text/javascript'>
+      var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+      (function() {
+         var gads = document.createElement('script');
+         gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol;
+         gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+         var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node);
+      })();
+   </script>
+} else {
+   <script type='text/javascript'>
+      (function() {
+         var useSSL = 'https:' == document.location.protocol;
+         var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+         document.write('<scr' + 'ipt src=\"' + src + '\"></scr' + 'ipt>');
+      })();
+   </script>
+}
+
+<script type='text/javascript'>
+   googletag.cmd.push(function() {
+      @foreach (var queueEntry in entires) {
+         var targetingCommand = adService.BuildTargetingCommand(queueEntry.AdTargeting);
+         @:googletag.defineSlot('@(queueEntry.AdUnit)', @(queueEntry.AdSize), '@(queueEntry.AdElement)').addService(googletag.pubads())@Html.Raw(targetingCommand);
+      }
+      googletag.pubads().enableSingleRequest(); googletag.enableServices();
+   });
+</script>
