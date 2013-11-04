@@ -1,9 +1,9 @@
 ﻿@model Arana.DoubleClickForPublishers.Models.GooglePublisherTagField
 <fieldset>
-   <legend>@Model.DisplayName</legend>
-   <div>
-      <label for="@Html.FieldIdFor( m => m.Targeting )">@T( "Targeting" )</label>
-      @Html.EditorFor( m => m.Targeting )
-      <span class="hint">@T( "Semi-colon delimited pairs. Multiple values should be comma-delimited. Ex: Category=Stoves;Keywords=glass-top,electric" )</span>
-   </div>
+  <legend>@Model.DisplayName</legend>
+  <div>
+    <label for="@Html.FieldIdFor(m => m.Targeting)">@T("Targeting")</label>
+    @Html.EditorFor(m => m.Targeting)
+    <span class="hint">@T("Semi-colon delimited pairs. Multiple values should be comma-delimited. Ex: Category=Stoves;Keywords=glass-top,electric")</span>
+  </div>
 </fieldset>

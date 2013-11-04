@@ -1,8 +1,8 @@
 ﻿<Placement>
-   <Place Fields_DoubleClickForPublishers_GPT_Edit="Content:7"
-          Fields_DoubleClickForPublishers_GPT="Content:3"
-          Parts_DoubleClickForPublishers_GPT_Edit="Content:7"
-          Parts_DoubleClickForPublishers_GPT="Content:after"
-          Parts_DoubleClickForPublishersSettings_Edit="Content:11"
+  <Place Fields_DoubleClickForPublishers_GPT_Edit="Content:7"
+         Fields_DoubleClickForPublishers_GPT="Content:3"
+         Parts_DoubleClickForPublishers_GPT_Edit="Content:7"
+         Parts_DoubleClickForPublishers_GPT="Content:after"
+         Parts_DoubleClickForPublishersSettings_Edit="Content:11"
           />
 </Placement>

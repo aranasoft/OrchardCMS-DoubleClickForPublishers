@@ -1,34 +1,34 @@
 ﻿@using Arana.DoubleClickForPublishers.Services
 @model Arana.DoubleClickForPublishers.Settings.GooglePublisherTagPartFieldSettings
 @{
-   var placement = WorkContext.Resolve<IAdService>();
-   var zones = placement.GetZones().Select(zone => new SelectListItem {Text = zone, Value = zone}).ToList();
-   zones.Insert(0, new SelectListItem {Text = "--", Value = ""});
+  var placement = WorkContext.Resolve<IAdService>();
+  var zones = placement.GetZones().Select(zone => new SelectListItem {Text = zone, Value = zone}).ToList();
+  zones.Insert(0, new SelectListItem {Text = "--", Value = ""});
 }
 <fieldset>
-   <div>
-      <label for="@Html.FieldIdFor(m => m.ThemeZone)">@T("Theme Zone")</label>
-      @Html.DropDownListFor(m => m.ThemeZone, zones)
-      @Html.ValidationMessageFor(m => m.ThemeZone)
-   </div>
-   <div>
-      <label for="@Html.FieldIdFor(m => m.Position)">@T("Position")</label>
-      @Html.EditorFor(m => m.Position)
-      @Html.ValidationMessageFor(m => m.Position)
-   </div>
-   <div>
-      <label for="@Html.FieldIdFor(m => m.AdUnit)">@T("Ad Unit")</label>
-      @Html.EditorFor(m => m.AdUnit)
-      @Html.ValidationMessageFor(m => m.AdUnit)
-   </div>
-   <div>
-      <label for="@Html.FieldIdFor(m => m.Height)">@T("Height")</label>
-      @Html.EditorFor(m => m.Height)
-      @Html.ValidationMessageFor(m => m.Height)
-   </div>
-   <div>
-      <label for="@Html.FieldIdFor(m => m.Width)">@T("Width")</label>
-      @Html.EditorFor(m => m.Width)
-      @Html.ValidationMessageFor(m => m.Width)
-   </div>
+  <div>
+    <label for="@Html.FieldIdFor(m => m.ThemeZone)">@T("Theme Zone")</label>
+    @Html.DropDownListFor(m => m.ThemeZone, zones)
+    @Html.ValidationMessageFor(m => m.ThemeZone)
+  </div>
+  <div>
+    <label for="@Html.FieldIdFor(m => m.Position)">@T("Position")</label>
+    @Html.EditorFor(m => m.Position)
+    @Html.ValidationMessageFor(m => m.Position)
+  </div>
+  <div>
+    <label for="@Html.FieldIdFor(m => m.AdUnit)">@T("Ad Unit")</label>
+    @Html.EditorFor(m => m.AdUnit)
+    @Html.ValidationMessageFor(m => m.AdUnit)
+  </div>
+  <div>
+    <label for="@Html.FieldIdFor(m => m.Height)">@T("Height")</label>
+    @Html.EditorFor(m => m.Height)
+    @Html.ValidationMessageFor(m => m.Height)
+  </div>
+  <div>
+    <label for="@Html.FieldIdFor(m => m.Width)">@T("Width")</label>
+    @Html.EditorFor(m => m.Width)
+    @Html.ValidationMessageFor(m => m.Width)
+  </div>
 </fieldset>

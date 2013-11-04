@@ -1,14 +1,14 @@
 ﻿@model Arana.DoubleClickForPublishers.Models.DoubleClickForPublishersSettingsPart
 
 <fieldset>
-	<legend>@T("DoubleClick for Publishers")</legend>
-	<div>
-		<label for="@Html.FieldIdFor(m => m.NetworkCode)">@T("Network Code (1234)")</label>
-		@Html.EditorFor(m => m.NetworkCode)
-		@Html.ValidationMessage("NetworkCode", "*")
-	</div>
-	<div>
-		@Html.EditorFor(m => m.UseAsyncTags)
-		<label for="@Html.FieldIdFor(m => m.UseAsyncTags)" class="forcheckbox">@T("Use Async Ads")</label>
-	</div>
+  <legend>@T("DoubleClick for Publishers")</legend>
+  <div>
+    <label for="@Html.FieldIdFor(m => m.NetworkCode)">@T("Network Code (1234)")</label>
+    @Html.EditorFor(m => m.NetworkCode)
+    @Html.ValidationMessage("NetworkCode", "*")
+  </div>
+  <div>
+    @Html.EditorFor(m => m.UseAsyncTags)
+    <label for="@Html.FieldIdFor(m => m.UseAsyncTags)" class="forcheckbox">@T("Use Async Ads")</label>
+  </div>
 </fieldset>
