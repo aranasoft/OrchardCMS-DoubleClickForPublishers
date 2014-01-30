@@ -6,11 +6,17 @@ Enter in your Network Code, AdUnit name, and display dimensions to display an Ad
 
 Supports implementation via Content Fields, Content Parts, and Widgets.
 
+
 ## Release Notes:
+
+### v1.1 - 30 January 2014
+
+Resolve DisplayResult error occuring when ad is placed within a different zone.
 
 ### v1.0.1 - 4 November 2013
 
 Initial Release
+
 
 ## Installation
 
@@ -24,7 +30,6 @@ Option 2: Download from the Orchard Gallery [directly](http://gallery.orchardpro
 - [Jay Harris](http://github.com/JayHarris) (primary author)
 
 
-
 ## License
 
-MIT. Please review LICENSE for licensing information.
+This Module is copyright of Arana Software, released under the [BSD License](http://opensource.org/licenses/BSD-3-Clause).
