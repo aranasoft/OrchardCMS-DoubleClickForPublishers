@@ -11,7 +11,7 @@ Supports implementation via Content Fields, Content Parts, and Widgets.
 
 ### v1.1 - 30 January 2014
 
-Resolve DisplayResult error occuring when ad is placed within a different zone.
+Resolve DisplayResult error occurring when ad is placed within a different zone.
 
 ### v1.0.1 - 4 November 2013
 
