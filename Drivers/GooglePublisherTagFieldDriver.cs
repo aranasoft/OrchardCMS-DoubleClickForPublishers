@@ -60,7 +60,7 @@ namespace Arana.DoubleClickForPublishers.Drivers {
                         var zoneSection = _workContextAccessor.GetContext().Layout.Zones[zone];
                         if (position > 0) zoneSection.Add(shape, position.ToString(CultureInfo.InvariantCulture));
                         else zoneSection.Add(shape);
-                        return new DriverResult();
+                        return new Shape();
                     }
 
                     return shape;
