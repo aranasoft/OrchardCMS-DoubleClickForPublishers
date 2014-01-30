@@ -6,6 +6,7 @@ using Orchard;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Drivers;
 using Orchard.ContentManagement.Handlers;
+using Orchard.DisplayManagement.Shapes;
 using Orchard.Localization;
 
 namespace Arana.DoubleClickForPublishers.Drivers {

@@ -2,7 +2,7 @@
 AntiForgery: enabled
 Author: Arana Software, Jay Harris
 Website: https://github.com/aranasoft/OrchardCMS-DoubleClickForPublishers
-Version: 1.1
+Version: 1.1.1
 OrchardVersion: 1.7
 Description: Google DoubleClick for Publisher support. Integrate Google Publisher Tags into Orchard Content and Widgets
 Dependencies: Orchard.Themes
