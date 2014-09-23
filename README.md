@@ -1,4 +1,6 @@
-# DoubleClick for Publishers Module for Orchard CMS
+# orchard-dfp
+
+A DoubleClick for Publishers Module for [OrchardCMS](http://www.orchardproject.net/) (>=1.7)
 
 Monetize your Orchard site. Adds support for Ads through DoubleClick for Publishers by Google. Supports synchronous and asynchronous Google Publisher Tags (GPT).
 
